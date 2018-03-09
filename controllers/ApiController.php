@@ -14,14 +14,14 @@ class ApiController extends Controller
 {
     public function actionTest()
     {
-        /*
-        $json = [
-            'cities' => [
-                'Moscow' => -15, 'Vladimir' => -10, 'Podolsk' => -5
-            ],
-        ];
-        return json_encode($json);
-        */
-        return $this->render('test');
+            $json = [
+                'cities' => [
+                    'Moscow' => -15, 'Vladimir' => -10, 'Podolsk' => -5
+                ],
+            ];
+
+        header('Content-type: application/json');
+        echo json_encode( $json );
+        exit();
     }
 }
